@@ -99,7 +99,7 @@ RSpec.describe 'ツイート編集', type: :system do
       # ツイート1に「編集」へのリンクがないことを確認する
       expect(
         all('.more')[1].hover
-      ).to have_no_link '編集', href: edit_tweet_path(@tweet2)
+      ).to have_no_link '編集', href: edit_tweet_path(@tweet1)
       # ツイート2に「編集」へのリンクがないことを確認する
       expect(
         all('.more')[0].hover
@@ -155,7 +155,7 @@ RSpec.describe 'ツイート削除', type: :system do
       ).to have_no_link '削除', href: tweet_path(@tweet1)
       # ツイート2に「削除」へのリンクがないことを確認する
       expect(
-        all(".more")[0].hover
+        all('.more')[0].hover
       ).to have_no_link '削除', href: tweet_path(@tweet2)
     end
   end
